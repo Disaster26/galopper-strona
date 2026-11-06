@@ -166,7 +166,7 @@
         e.preventDefault();
         var btn = f.querySelector('button[type=submit]');
         btn.disabled = true; btn.textContent = 'Wysyłanie...';
-        fetch(f.action, { method: 'POST', body: new FormData(f), headers: { 'X-Requested-With': 'fetch' }, credentials: 'same-origin' })
+        fetch(f.getAttribute('action'), { method: 'POST', body: new FormData(f), headers: { 'X-Requested-With': 'fetch' }, credentials: 'same-origin' })
           .then(function (r) { return r.json(); })
           .then(function (d) {
             info.textContent = d.wiadomosc;
