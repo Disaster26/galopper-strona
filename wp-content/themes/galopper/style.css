@@ -4,7 +4,7 @@ Theme URI: https://galoppergroup.pl/
 Author: Wylinka
 Author URI: https://wylinka.pl/
 Description: Lekki motyw strony Galopper Group (dachy, okna, drzwi, bramy, elewacje). Treści w edytorze stron, dane firmy w Wygląd > Dostosuj. Bez page buildera.
-Version: 1.0.0
+Version: 1.1.0
 Requires at least: 6.4
 Requires PHP: 7.4
 License: GNU General Public License v2 or later
@@ -196,6 +196,13 @@ strong,b{font-weight:600}
 
 /* ---------- oferta: karty ---------- */
 .oferta{background:var(--stal)}
+/* raty: pasek pod ofertą (ostatnie px zasłania kalenica następnej sekcji) */
+.raty{background:#fff;border-top:1px solid var(--linia);padding:26px 0 calc(26px + var(--kalenica))}
+.raty-in{display:flex;align-items:center;gap:10px 28px;flex-wrap:wrap}
+.raty-h{margin:0;font:700 26px/1 var(--naglowki);color:var(--grafit);padding-left:44px;background:var(--korona) 0 .2em/32px 15px no-repeat;text-transform:none}
+.raty-txt{margin:0;flex:1 1 380px;color:var(--szary)}
+.raty-lnk{flex:0 0 auto}
+.cta-pas .cta-raty{margin-top:8px;font-size:15.5px;color:#fff;opacity:.92}
 .kafle{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
 .kafel{background:#fff;display:flex;flex-direction:column;min-width:0;clip-path:polygon(0 0,calc(100% - 30px) 0,100% 30px,100% 100%,0 100%);transition:transform .25s,box-shadow .25s}
 .kafel:hover{transform:translateY(-3px)}
