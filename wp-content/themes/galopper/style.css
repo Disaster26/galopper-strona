@@ -4,7 +4,7 @@ Theme URI: https://galoppergroup.pl/
 Author: Wylinka
 Author URI: https://wylinka.pl/
 Description: Lekki motyw strony Galopper Group (dachy, okna, drzwi, bramy, elewacje). Treści w edytorze stron, dane firmy w Wygląd > Dostosuj. Bez page buildera.
-Version: 1.1.1
+Version: 1.2.0
 Requires at least: 6.4
 Requires PHP: 7.4
 License: GNU General Public License v2 or later
@@ -149,7 +149,7 @@ strong,b{font-weight:600}
 .marki{background:#fff;padding:46px 0 42px;border-bottom:1px solid var(--linia)}
 .marki h2{font-size:24px;color:var(--grafit);margin-bottom:6px;text-align:center}
 .marki-info{text-align:center;font-size:15.5px;color:var(--szary);margin:0 auto 22px;max-width:48rem}
-.marki-lista{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:12px 18px;align-items:center}
+.marki-lista{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:12px 18px;align-items:center}
 .marki-lista li{display:flex;align-items:center;justify-content:center;height:62px;min-width:0}
 .marki-lista a,.marki-lista span{display:flex;align-items:center;justify-content:center;width:100%;height:100%;padding:8px;border:1px solid transparent;transition:border-color .15s,background .15s}
 .marki-lista a:hover,.marki-lista a:focus-visible{border-color:var(--linia);background:var(--stal)}
@@ -277,6 +277,12 @@ strong,b{font-weight:600}
 .duzy-mail{display:block;font-weight:600;color:var(--akcent-j);text-decoration:none;font-size:20px;margin:6px 0 16px;overflow-wrap:anywhere}
 .kontakt address{font-style:normal;color:#cfd6da;margin-bottom:18px}
 .godziny{color:#cfd6da}
+.kontakt-social{display:flex;flex-wrap:wrap;gap:6px 22px;margin:-6px 0 16px}
+.kontakt-social a{color:#fff;font-weight:600;text-decoration:none;border-bottom:2px solid rgba(143,202,219,.45);padding-bottom:1px}
+.kontakt-social a:hover{border-color:var(--akcent-j)}
+.kontakt-biuro{margin:0 0 18px;overflow:hidden;clip-path:polygon(0 0,calc(100% - 28px) 0,100% 28px,100% 100%,0 100%)}
+.kontakt-biuro img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.kontakt-biuro figcaption{font-size:14.5px;color:#cfd6da;padding:8px 0 0}
 .mapa{overflow:hidden;aspect-ratio:16/9;margin-bottom:14px;background:var(--grafit-3)}
 .mapa iframe{width:100%;height:100%;border:0;display:block}
 .kontakt .lnk{color:var(--akcent-j);border-color:rgba(143,202,219,.4)}
@@ -313,6 +319,7 @@ strong,b{font-weight:600}
 .pg-tel svg{width:20px;height:20px;fill:var(--akcent-j)}
 .pg-foto{position:relative;background:var(--grafit-3);margin-right:calc((100vw - min(1240px,100vw - 48px)) / -2);clip-path:polygon(16% 0,100% 0,100% 100%,0 100%)}
 .pg-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.podstrona-glowa:not(.oferta-glowa) .pg-foto img{object-position:50% 28%}
 .pg-foto::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(47,139,163,1) 0,rgba(47,139,163,1) 100%);clip-path:polygon(16% 0,calc(16% + 8px) 0,8px 100%,0 100%)}
 .okruszki{font-size:15px;color:#a8b3b8;margin-bottom:16px;display:flex;flex-wrap:wrap;gap:4px 8px}
 .okruszki a{color:#c3ccd0;text-decoration:none}
@@ -487,7 +494,8 @@ strong,b{font-weight:600}
   .marki{padding:32px 0 26px}
   .marki h2{font-size:22px}
   .marki-info{font-size:14.5px;margin-bottom:14px}
-  .marki-lista{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 10px}
+  .marki-lista{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 10px}
+  .marki-lista li{flex:0 0 calc((100% - 20px) / 3)}
   .marki-lista li{height:52px}
   .marki-lista img{max-height:32px}
   .sek-glowa{margin-bottom:22px}
